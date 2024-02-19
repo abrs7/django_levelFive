@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 
-from basic_app.models import UserProfileInfo
+from basic_app.models import UserProfileInfoForm
 
 
 class UserForm(forms.ModelForm):
@@ -13,8 +13,8 @@ class UserForm(forms.ModelForm):
         fields = ('username','email','password')
 
 
-class userProfileInfo(forms.ModelForm):
+class userProfileInfoForm(forms.ModelForm):
     class Meta():
-        model = UserProfileInfo
+        model = UserProfileInfoForm
         fields = ('portofolio_site', 'profile_pic')
 
